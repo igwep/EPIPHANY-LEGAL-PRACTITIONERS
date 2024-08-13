@@ -5,7 +5,7 @@ import IntegrityIcon from '@mui/icons-material/VerifiedUser';
 
 const About = () => {
   return (
-    <section className="flex flex-col h-[100vh] mt-72 md:flex-row items-center justify-between bg-white py-10 md:py-20 px-4 md:px-16">
+    <section className="flex flex-col h-[100vh] mt-0 md:flex-row items-center justify-between bg-white py-10 md:py-20 px-4 md:px-16">
       {/* Left Section: Image */}
       <div className="w-full md:w-1/2 mb-6 md:mb-0">
         <img

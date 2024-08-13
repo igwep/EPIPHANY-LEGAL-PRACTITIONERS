@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex flex-col md:flex-row items-center">
           <img src="../src/assets/images/logo/logo/Picture2.png" alt="Logo" className="h-16 md:h-20" />
           <div className="flex flex-col justify-center mt-2 md:mt-0 md:ml-4 text-center md:text-left">
-            <p className="text-xl md:text-3xl font-bold uppercase text-custom-primary">Epiphany Legal Practitioners</p>
+            <p className="text-xl md:text-3xl font-extrabold uppercase text-custom-primary">Epiphany Legal Practitioners</p>
             <hr className="border-custom-primary border-t-2 mt-1 hidden md:block" />
           </div>
         </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
         <img
           src="../src/assets/images/logo/logo/Picture3.png"
           alt="Logo"
-          className={`h-16  md:h-12 transition-transform duration-300 ${isScrolled ? 'scale-75 flex' : 'scale-100 hidden'}`}
+          className={`h-16  md:h-16 transition-transform duration-300 ${isScrolled ? 'scale-75 flex' : 'scale-100 hidden'}`}
         />
 
         {/* Navigation Links */}

@@ -3,10 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './assets/components/Navbar';
 import Home from './assets/pages/Home';
 import  Services  from './assets/pages/Services';
+import Footer from './assets/components/footer';
 import  About from './assets/pages/About';
 import Submenu1 from './assets/pages/Submenu1';
 import Submenu2 from './assets/pages/Submenu2';
 import Submenu3 from './assets/pages/Submenu3';
+import Contact from './assets/pages/Contact';
+import LegalRepresentation from './assets/pages/LegalRepresentation';
 import { GlobalProvider } from './assets/components/GlobalProvider';
 
 const App = () => {
@@ -19,11 +22,14 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
+          <Route path="/legal-representation" element={<LegalRepresentation />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/home/submenu1" element={<Submenu1 />} />
           <Route path="/home/submenu2" element={<Submenu2 />} />
           <Route path="/home/submenu3" element={<Submenu3 />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
     </GlobalProvider>
   );
