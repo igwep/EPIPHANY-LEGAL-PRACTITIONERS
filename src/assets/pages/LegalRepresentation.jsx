@@ -2,9 +2,9 @@ import React from 'react';
 
 const LegalRepresentation = () => {
   return (
-    <div className="bg-gray-100 md:mt-40 mt-80">
+    <div className="bg-gray-100 md:mt-36 mt-80">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('../src/assets/images/legal-representation.jpg')" }}>
+      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('../src/assets/images/New Folder/legal.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Legal Representation</h1>

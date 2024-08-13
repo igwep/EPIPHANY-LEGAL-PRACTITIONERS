@@ -5,7 +5,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact = () => {
   return (
-    <section className="bg-gray-100 py-16 mt-36 md:mt-36 px-4 md:px-16">
+    <section className="bg-gray-100 py-16 mt-72 md:mt-36 px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Get in Touch</h2>
         

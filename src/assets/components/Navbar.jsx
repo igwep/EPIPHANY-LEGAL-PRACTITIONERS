@@ -1,17 +1,37 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalContext } from './GlobalProvider';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import MenuIcon from '@mui/icons-material/Menu';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { menuModal, setMenuModal } = useContext(GlobalContext);
+  const dropdownRef = useRef(null);
 
   const handleMobileModal = () => {
     setMenuModal(!menuModal);
   };
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +78,7 @@ const Navbar = () => {
 
       {/* Navigation Links Section */}
       <div
-        className={`flex j items-center py-2 md:py-4 px-4 bg-custom-primary transition-all duration-300 ${
+        className={`flex items-center py-2 md:py-4 px-4 bg-custom-primary transition-all duration-300 ${
           isScrolled ? 'pt-2 pb-2 justify-between' : 'pt-4 pb-4 justify-end'
         }`}
       >
@@ -77,9 +97,39 @@ const Navbar = () => {
           <Link to="/about" className="hover:text-gray-300">
             About
           </Link>
-          <Link to="/services" className="hover:text-gray-300">
-            Services
-          </Link>
+          {/* Services Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            
+            ref={dropdownRef}
+          >
+            <Link to="/services" className="hover:text-gray-300 flex items-center gap-1">
+              Services <ExpandMoreIcon />
+            </Link>
+            {isDropdownOpen && (
+              <div onMouseLeave={() => setIsDropdownOpen(false)} className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg py-2">
+                <Link
+                  to="/dispute-resolution"
+                  className="block px-4 py-2 hover:bg-gray-200"
+                >
+                  Dispute Resolution
+                </Link>
+                <Link
+                  to="/consultation"
+                  className="block px-4 py-2 hover:bg-gray-200"
+                >
+                  Consultation
+                </Link>
+                <Link
+                  to="/legal-representation"
+                  className="block px-4 py-2 hover:bg-gray-200"
+                >
+                  Legal Representation
+                </Link>
+              </div>
+            )}
+          </div>
           <Link to="/contact" className="hover:text-gray-300">
             Contact
           </Link>
@@ -103,9 +153,17 @@ const Navbar = () => {
           <Link to="/about" className="py-2 hover:underline underline-offset-4 decoration-2">
             About
           </Link>
-          <Link to="/services" className="py-2 hover:underline underline-offset-4 decoration-2">
-            Services
-          </Link>
+          {/* Mobile Services Dropdown */}
+          <div className="w-full flex flex-col items-center">
+            <Link
+            to="/services"
+          
+              className="py-2 hover:underline underline-offset-4 decoration-2 flex items-center gap-1 w-full justify-center"
+            >
+              Services 
+            </Link>
+            
+          </div>
           <Link to="/contact" className="py-2 hover:underline underline-offset-4 decoration-2">
             Contact
           </Link>

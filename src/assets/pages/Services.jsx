@@ -2,6 +2,7 @@ import React from 'react';
 import LegalServicesIcon from '@mui/icons-material/Gavel'; // Example icon, replace with relevant ones
 import ConsultationIcon from '@mui/icons-material/EmojiPeople';
 import DisputeResolutionIcon from '@mui/icons-material/Handshake';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -17,29 +18,29 @@ const Services = () => {
 
       {/* Service Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <Link to="/legal-representation" className="bg-white p-6 rounded-lg shadow-lg text-center">
           <LegalServicesIcon className="text-custom-primary text-4xl mb-4" />
           <h3 className="text-xl font-semibold mb-2">Legal Representation</h3>
           <p className="text-gray-600">
             Professional and dedicated legal representation in various fields of law.
           </p>
-        </div>
+        </Link>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <Link to="/consultation" className="bg-white p-6 rounded-lg shadow-lg text-center">
           <ConsultationIcon className="text-custom-primary text-4xl mb-4" />
           <h3 className="text-xl font-semibold mb-2">Consultation</h3>
           <p className="text-gray-600">
             Get expert legal advice tailored to your unique situation.
           </p>
-        </div>
+        </Link>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <Link to="/dispute-resolution" className="bg-white p-6 rounded-lg shadow-lg text-center">
           <DisputeResolutionIcon className="text-custom-primary text-4xl mb-4" />
           <h3 className="text-xl font-semibold mb-2">Dispute Resolution</h3>
           <p className="text-gray-600">
             Effective and efficient dispute resolution services.
           </p>
-        </div>
+        </Link>
       </div>
     </section>
   );
