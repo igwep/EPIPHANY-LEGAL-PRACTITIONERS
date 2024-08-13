@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Space+Grotesk:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image-mobile {
+    background-image: url('../src/assets/images/New Folder/3CAB34F0-3F6B-45CA-B983-924F7BD3437B_fixAdvanced[1]\(1\)\(1\).png');
+    /* Adjust the values as needed */
+  
+  }
+  .postion{
+    background-position: 10% 80%; 
+  }
+  .bg-desktop{
+    background-image: url('../src/assets/images/New Folder/Hero\ Image.jpg')
+  }
