@@ -44,7 +44,7 @@ const Navbar = () => {
             <hr className="border-custom-primary border-t-2 mt-1 hidden md:block" />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-2 md:gap-8 items-center text-gray-800 mt-4 md:mt-0">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center text-gray-800 mt-4 md:mt-0">
           <div className="flex items-center bg-custom-secondary py-2 px-4 rounded-full">
             <CallIcon className="text-white" />
             <p className="ml-2 text-white cursor-pointer">(314) 530-8633</p>
