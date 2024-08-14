@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import LegalIcon from '@mui/icons-material/Gavel'; // Example icon, replace with relevant ones
 import SupportIcon from '@mui/icons-material/Support';
