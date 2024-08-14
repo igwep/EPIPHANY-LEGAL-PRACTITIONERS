@@ -10,7 +10,7 @@ const About = () => {
       {/* Left Section: Image */}
       <div className="w-full md:w-[40%] mb-6 md:mb-0">
         <img
-          src="../src/assets/images/New Folder/Hero Image.jpg"
+          src="/assets/images/New%20Folder/Hero%20Image.jpg"
           alt="About us"
           className="w-full h-auto rounded-lg shadow-lg"
         />
