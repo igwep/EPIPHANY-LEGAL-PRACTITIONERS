@@ -64,11 +64,11 @@ const Navbar = () => {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center text-gray-800 mt-4 md:mt-0">
           <div className="flex items-center bg-custom-secondary py-2 px-4 rounded-full">
             <CallIcon className="text-white" />
-            <p className="ml-2 text-white cursor-pointer">(314) 530-8633</p>
+            <p className="ml-2 text-white cursor-pointer">+2348033451428</p>
           </div>
           <div className="flex items-center bg-custom-secondary py-2 px-4 rounded-full">
             <EmailIcon className="text-white" />
-            <p className="ml-2 text-white">dmueller@muellerlawgroupstl.com</p>
+            <p className="ml-2 text-white">barrmike3@yahoo.com</p>
           </div>
         </div>
       </div>

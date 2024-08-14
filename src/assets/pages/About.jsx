@@ -19,7 +19,7 @@ const About = () => {
       {/* Right Section: Bio and About Text */}
       <div className="w-full md:w-1/2 flex flex-col justify-center">
       <h2 className="text-4xl font-extrabold text-custom-primary mb-4">
-              Meet [Your Name]
+              ABOUT MICHAEL NWOSU
             </h2>
             <p className="text-gray-700 text-lg mb-6">
               I was called to the bar in 1995 after completing my studies at the prestigious University of Benin. I fulfilled my NYSC duties in Kaduna, and upon completion, I joined the esteemed law firm of A. O. Akpedeye & Co. in 1996. Over the years, I have been a part of the firm's evolution into Compos Months Legal Practitioners. 

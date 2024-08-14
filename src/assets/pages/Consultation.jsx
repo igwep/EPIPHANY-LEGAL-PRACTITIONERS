@@ -5,8 +5,8 @@ const Consultation = () => {
   return (
     <div className="bg-gray-100 md:mt-40 mt-80">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('../src/assets/images/New%20Folder/scott-graham-OQMZwNd3ThU-unsplash.jpg')" }}>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+      <section className="relative bg-cover bg-center md:h-[70vh] h-[50vh]" style={{ backgroundImage: "url('/assets/images/New%20Folder/legal.jpg')" }}>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Schedule a Consultation</h1>
           <p className="mt-4 text-lg md:text-xl">Your First Step Towards Legal Guidance</p>
@@ -88,9 +88,9 @@ const Consultation = () => {
         <p className="text-lg mb-12">
           Contact us today to schedule your consultation and take the first step towards resolving your legal issues.
         </p>
-        <a href="tel:(314)530-8633" className="bg-custom-secondary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-secondary-dark transition-colors">Call Us: (314) 530-8633</a>
+        <a href="tel:+2348033451428" className="bg-custom-secondary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-secondary-dark transition-colors">Call Us: +2348033451428</a>
         <p className="mt-8">or</p>
-        <a href="mailto:dmueller@muellerlawgroupstl.com" className="mt-4 inline-block bg-custom-secondary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-secondary-dark transition-colors">Email Us: dmueller@muellerlawgroupstl.com</a>
+        <a href="mailto:barrmike3@yahoo.com" className="mt-4 inline-block bg-custom-secondary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-secondary-dark transition-colors">Email Us: barrmike3@yahoo.com</a>
       </section>
 
       {/* Contact Form Section */}

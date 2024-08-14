@@ -15,15 +15,15 @@ const Contact = () => {
           <div className="md:w-1/3">
             <div className="flex items-center mb-6">
               <LocationOnIcon className="mr-2 text-custom-primary" />
-              <p>1234 Legal St., Suite 100, City, ST 12345</p>
+              <p>124 Jakpa Road Effurun, Uvwie Local Government Area Delta state, Nigeria</p>
             </div>
             <div className="flex items-center mb-6">
               <CallIcon className="mr-2 text-custom-primary" />
-              <p>(314) 530-8633</p>
+              <p>+2348033451428</p>
             </div>
             <div className="flex items-center mb-6">
               <EmailIcon className="mr-2 text-custom-primary" />
-              <p>dmueller@muellerlawgroupstl.com</p>
+              <p>barrmike3@yahoo.com</p>
             </div>
             
             {/* Google Map */}

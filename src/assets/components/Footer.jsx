@@ -20,15 +20,15 @@ const Footer = () => {
           <h2 className="text-2xl font-bold mb-4">Epiphany Legal Practitioners</h2>
           <div className="flex items-center mb-4">
             <LocationOnIcon className="mr-2" />
-            <p>1234 Legal St., Suite 100, City, ST 12345</p>
+            <p>124 Jakpa Road Effurun, Uvwie Local Government Area Delta state, Nigeria</p>
           </div>
           <div className="flex items-center mb-4">
             <CallIcon className="mr-2" />
-            <p>(314) 530-8633</p>
+            <p>+2348033451428</p>
           </div>
           <div className="flex items-center">
             <EmailIcon className="mr-2" />
-            <p>dmueller@muellerlawgroupstl.com</p>
+            <p>barrmike3@yahoo.com</p>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 const DisputeResolution = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 md:mt-40 mt-80">
       {/* Hero Section */}
       <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('')" }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
