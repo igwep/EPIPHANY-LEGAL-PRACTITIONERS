@@ -6,9 +6,6 @@ import Home from './assets/pages/Home';
 import  Services  from './assets/pages/Services';
 import Footer from './assets/components/Footer';
 import  About from './assets/pages/About';
-import Submenu1 from './assets/pages/Submenu1';
-import Submenu2 from './assets/pages/Submenu2';
-import Submenu3 from './assets/pages/Submenu3';
 import Contact from './assets/pages/Contact';
 import Consultation from './assets/pages/Consultation';
 import LegalRepresentation from './assets/pages/LegalRepresentation';
@@ -29,9 +26,6 @@ const App = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/dispute-resolution" element={<DisputeResolution />} />
           <Route path="/consultation" element={<Consultation />} />
-          <Route path="/home/submenu1" element={<Submenu1 />} />
-          <Route path="/home/submenu2" element={<Submenu2 />} />
-          <Route path="/home/submenu3" element={<Submenu3 />} />
         </Routes>
       </div>
       <Footer />

@@ -18,12 +18,15 @@ const About = () => {
 
       {/* Right Section: Bio and About Text */}
       <div className="w-full md:w-1/2 flex flex-col justify-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-custom-primary mb-4">
-          Meet John Doe
-        </h2>
-        <p className="text-gray-700 text-lg md:text-xl mb-6">
-          John Doe is a seasoned attorney with over 20 years of experience in the legal field. Specializing in corporate law and dispute resolution, John has a proven track record of successfully representing clients in complex legal matters. His dedication to his clients and passion for justice make him a trusted advisor in the legal community.
-        </p>
+      <h2 className="text-4xl font-extrabold text-custom-primary mb-4">
+              Meet [Your Name]
+            </h2>
+            <p className="text-gray-700 text-lg mb-6">
+              I was called to the bar in 1995 after completing my studies at the prestigious University of Benin. I fulfilled my NYSC duties in Kaduna, and upon completion, I joined the esteemed law firm of A. O. Akpedeye & Co. in 1996. Over the years, I have been a part of the firm's evolution into Compos Months Legal Practitioners. 
+            </p>
+            <p className="text-gray-700 text-lg mb-6">
+              I also had the honor of serving the Delta State Government as the Special Assistant to the Honourable Attorney General and Commissioner for Justice. My journey in law has been defined by a commitment to excellence and a deep dedication to justice.
+            </p>
 
         <h2 className="text-3xl md:text-4xl font-bold text-custom-primary mb-4">
           About Epiphany Legal Practitioners
