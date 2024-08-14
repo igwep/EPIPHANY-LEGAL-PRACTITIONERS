@@ -6,8 +6,11 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { GlobalContext } from './GlobalProvider';
+import { useContext } from 'react';
 
 const Footer = () => {
+  const {handleLinkClick} = useContext(GlobalContext);
   return (
     <footer className="bg-gray-900 text-white py-10 px-4 md:px-16">
       <div className="flex flex-col md:flex-row justify-between mb-8">
@@ -34,16 +37,16 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul>
               <li className="mb-2">
-                <Link to="/" className="hover:underline">Home</Link>
+                <Link onClick={handleLinkClick} to="/" className="hover:underline">Home</Link>
               </li>
               <li className="mb-2">
-                <Link to="/about" className="hover:underline">About Us</Link>
+                <Link onClick={handleLinkClick} to="/about" className="hover:underline">About Us</Link>
               </li>
               <li className="mb-2">
-                <Link to="/services" className="hover:underline">Services</Link>
+                <Link onClick={handleLinkClick} to="/services" className="hover:underline">Services</Link>
               </li>
               <li className="mb-2">
-                <Link to="/contact" className="hover:underline">Contact</Link>
+                <Link onClick={handleLinkClick} to="/contact" className="hover:underline">Contact</Link>
               </li>
             </ul>
           </div>
@@ -52,13 +55,13 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Our Services</h3>
             <ul>
               <li className="mb-2">
-                <Link to="/legal-representation" className="hover:underline">Legal Representation</Link>
+                <Link onClick={handleLinkClick} to="/legal-representation" className="hover:underline">Legal Representation</Link>
               </li>
               <li className="mb-2">
-                <Link to="/consultation" className="hover:underline">Consultation</Link>
+                <Link onClick={handleLinkClick} to="/consultation" className="hover:underline">Consultation</Link>
               </li>
               <li className="mb-2">
-                <Link to="/dispute-resolution" className="hover:underline">Dispute Resolution</Link>
+                <Link onClick={handleLinkClick} to="/dispute-resolution" className="hover:underline">Dispute Resolution</Link>
               </li>
             </ul>
           </div>

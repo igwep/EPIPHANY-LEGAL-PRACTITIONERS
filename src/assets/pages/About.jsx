@@ -5,18 +5,25 @@ import IntegrityIcon from '@mui/icons-material/VerifiedUser';
 
 const About = () => {
   return (
-    <section className="flex flex-col h-[100vh] mt-0 md:flex-row items-center justify-between bg-white py-10 md:py-20 px-4 md:px-16">
+    <section className="flex flex-col mt-96 md:mt-28 h-auto  md:flex-row items-center justify-between bg-white py-10 md:py-20 px-4 md:px-16">
       {/* Left Section: Image */}
-      <div className="w-full md:w-1/2 mb-6 md:mb-0">
+      <div className="w-full md:w-[40%] mb-6 md:mb-0">
         <img
-          src="../src/assets/images/about-image.jpg"
+          src="../src/assets/images/New Folder/Hero Image.jpg"
           alt="About us"
           className="w-full h-auto rounded-lg shadow-lg"
         />
       </div>
 
-      {/* Right Section: Text and Icons */}
+      {/* Right Section: Bio and About Text */}
       <div className="w-full md:w-1/2 flex flex-col justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-custom-primary mb-4">
+          Meet John Doe
+        </h2>
+        <p className="text-gray-700 text-lg md:text-xl mb-6">
+          John Doe is a seasoned attorney with over 20 years of experience in the legal field. Specializing in corporate law and dispute resolution, John has a proven track record of successfully representing clients in complex legal matters. His dedication to his clients and passion for justice make him a trusted advisor in the legal community.
+        </p>
+
         <h2 className="text-3xl md:text-4xl font-bold text-custom-primary mb-4">
           About Epiphany Legal Practitioners
         </h2>

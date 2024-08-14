@@ -10,6 +10,7 @@ export const GlobalProvider = ({ children }) => {
   
   const handleLinkClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    console.log('here')
   };
 
   return (

@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { menuModal, setMenuModal } = useContext(GlobalContext);
   const dropdownRef = useRef(null);
-
+  const {handleLinkClick} = useContext(GlobalContext);
   const handleMobileModal = () => {
     setMenuModal(!menuModal);
   };
@@ -91,10 +91,10 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex gap-4 text-white">
-          <Link to="/" className="hover:text-gray-300">
+          <Link onClick={handleLinkClick}  to="/" className="hover:text-gray-300">
             Home
           </Link>
-          <Link to="/about" className="hover:text-gray-300">
+          <Link onClick={handleLinkClick} to="/about" className="hover:text-gray-300">
             About
           </Link>
           {/* Services Dropdown */}
@@ -104,24 +104,27 @@ const Navbar = () => {
             
             ref={dropdownRef}
           >
-            <Link to="/services" className="hover:text-gray-300 flex items-center gap-1">
+            <Link onClick={handleLinkClick} to="/services" className="hover:text-gray-300 flex items-center gap-1">
               Services <ExpandMoreIcon />
             </Link>
             {isDropdownOpen && (
               <div onMouseLeave={() => setIsDropdownOpen(false)} className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg py-2">
                 <Link
+                onClick={handleLinkClick}
                   to="/dispute-resolution"
                   className="block px-4 py-2 hover:bg-gray-200"
                 >
                   Dispute Resolution
                 </Link>
                 <Link
+                onClick={handleLinkClick}
                   to="/consultation"
                   className="block px-4 py-2 hover:bg-gray-200"
                 >
                   Consultation
                 </Link>
                 <Link
+                onClick={handleLinkClick}
                   to="/legal-representation"
                   className="block px-4 py-2 hover:bg-gray-200"
                 >
@@ -130,7 +133,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <Link to="/contact" className="hover:text-gray-300">
+          <Link onClick={handleLinkClick} to="/contact" className="hover:text-gray-300">
             Contact
           </Link>
         </div>
@@ -147,15 +150,15 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {menuModal && (
         <div className="md:hidden flex flex-col items-center bg-gray-200 text-black">
-          <Link to="/" className="py-2 hover:underline underline-offset-4 decoration-2">
+          <Link onClick={handleLinkClick} to="/" className="py-2 hover:underline underline-offset-4 decoration-2">
             Home
           </Link>
-          <Link to="/about" className="py-2 hover:underline underline-offset-4 decoration-2">
+          <Link onClick={handleLinkClick} to="/about" className="py-2 hover:underline underline-offset-4 decoration-2">
             About
           </Link>
           {/* Mobile Services Dropdown */}
           <div className="w-full flex flex-col items-center">
-            <Link
+            <Link onClick={handleLinkClick}
             to="/services"
           
               className="py-2 hover:underline underline-offset-4 decoration-2 flex items-center gap-1 w-full justify-center"
@@ -164,7 +167,7 @@ const Navbar = () => {
             </Link>
             
           </div>
-          <Link to="/contact" className="py-2 hover:underline underline-offset-4 decoration-2">
+          <Link onClick={handleLinkClick} to="/contact" className="py-2 hover:underline underline-offset-4 decoration-2">
             Contact
           </Link>
         </div>

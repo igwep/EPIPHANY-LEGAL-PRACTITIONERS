@@ -2,9 +2,9 @@ import React from 'react';
 
 const Consultation = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 md:mt-40 mt-80">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('../src/assets/images/consultation.jpg')" }}>
+      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('../src/assets/images/New Folder/scott-graham-OQMZwNd3ThU-unsplash.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Schedule a Consultation</h1>
@@ -33,7 +33,7 @@ const Consultation = () => {
             </ul>
           </div>
           <div className="md:w-1/2">
-            <img src="../src/assets/images/schedule-consultation.jpg" alt="Schedule Consultation" className="rounded-lg shadow-lg" />
+            <img src="../src/assets/images/New Folder/agenda-2080420.jpg" alt="Schedule Consultation" className="rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
