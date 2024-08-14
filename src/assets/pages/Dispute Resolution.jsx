@@ -127,9 +127,9 @@ const DisputeResolution = () => {
         <p className="text-lg text-gray-700 mb-12">
           If you're facing a dispute and need professional legal guidance, we're here to help. Contact us today to schedule a consultation and learn more about how we can assist you.
         </p>
-        <a href="tel:(314)530-8633" className="bg-custom-primary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-primary-dark transition-colors">Call Us: (314) 530-8633</a>
+        <a href="tel:+2348033451428" className="bg-custom-primary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-primary-dark transition-colors">Call Us: +2348033451428</a>
         <p className="mt-8">or</p>
-        <a href="mailto:dmueller@muellerlawgroupstl.com" className="mt-4 inline-block bg-custom-primary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-primary-dark transition-colors">Email Us: dmueller@muellerlawgroupstl.com</a>
+        <a href="mailto:barrmike3@yahoo.com" className="mt-4 inline-block bg-custom-primary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-primary-dark transition-colors">Email Us: barrmike3@yahoo.com</a>
       </section>
     </div>
   );

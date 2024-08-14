@@ -30,7 +30,7 @@ const Contact = () => {
             <iframe
               title="Google Map"
               className="w-full h-64 mt-6"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509199!2d144.9556513153164!3d-37.817313979751504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727cfb1b3b4b9b!2sLegal%20Practitioners!5e0!3m2!1sen!2sus!4v1632746113477!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d31768.362679651105!2d5.754624539383564!3d5.560299383886993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d5.545990199999999!2d5.8231174!4m5!1s0x1041adb406555555%3A0x9d70fc70f162962b!2sUvwie%20Local%20Government%20Council%20area%2C%20HQCQ%2B66X%2C%20Secretariat%20Road%2C%20Effurun%20GRA%2C%20Effurun%2C%20Wado%20City%2C%20Delta!3m2!1d5.5623678!2d5.780024699999999!5e0!3m2!1sen!2sng!4v1723678069286!5m2!1sen!2sng" 
               allowFullScreen=""
               loading="lazy"
             ></iframe>
