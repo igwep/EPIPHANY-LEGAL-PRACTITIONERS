@@ -23,7 +23,7 @@ export const Hero = () => {
       {/* Right Section: Image */}
       <div className="w-full md:w-1/2 mb-6 md:mb-0">
         <img
-          src="../src/assets/images/New Folder/198890-909564521_tiny.jpg"
+          src="/src/assets/images/New%20Folder/198890-909564521_tiny.jpg"
           alt="Legal consultation"
           className="w-full h-auto rounded-lg shadow-lg"
         />
