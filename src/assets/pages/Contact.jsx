@@ -1,10 +1,16 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mwpeqpyj"); // Replace with your Formspree form ID
+
+  if (state.succeeded) {
+    return <p className="text-center text-green-600 font-bold">Thanks for your message! We'll get back to you soon.</p>;
+  }
+
   return (
     <section className="bg-gray-100 py-16 mt-72 md:mt-36 px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
@@ -38,15 +44,17 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="md:w-2/3 bg-white p-8 shadow-md rounded-lg">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-6">
                 <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-custom-primary"
                   placeholder="Your Name"
                 />
+                <ValidationError prefix="Name" field="name" errors={state.errors} />
               </div>
 
               <div className="mb-6">
@@ -54,24 +62,29 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-custom-primary"
                   placeholder="Your Email"
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
 
               <div className="mb-6">
                 <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="5"
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-custom-primary"
                   placeholder="Your Message"
                 ></textarea>
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
 
               <button
                 type="submit"
                 className="w-full bg-custom-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-custom-primary-dark transition duration-300"
+                disabled={state.submitting}
               >
                 Send Message
               </button>

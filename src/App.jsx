@@ -11,6 +11,7 @@ import Consultation from './assets/pages/Consultation';
 import LegalRepresentation from './assets/pages/LegalRepresentation';
 import { GlobalProvider } from './assets/components/GlobalProvider';
 import DisputeResolution from './assets/pages/Dispute Resolution';
+import NotFound from './assets/components/NotFound';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/dispute-resolution" element={<DisputeResolution />} />
           <Route path="/consultation" element={<Consultation />} />
+          <Route path="*" element={<NotFound />} /> {/* Fallback route for 404 */}
         </Routes>
       </div>
       <Footer />

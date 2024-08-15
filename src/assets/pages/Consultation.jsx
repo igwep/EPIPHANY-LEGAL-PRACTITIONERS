@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import ContactForm from '../components/ContactForm';
 
 const Consultation = () => {
   return (
@@ -94,57 +95,7 @@ const Consultation = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="bg-white py-16 px-4 md:px-16">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Request a Consultation</h2>
-          <form className="space-y-4">
-            <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-custom-primary"
-                placeholder="Your Name"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-custom-primary"
-                placeholder="Your Email"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-custom-primary"
-                placeholder="Your Phone Number"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-custom-primary"
-                rows="4"
-                placeholder="How can we help you?"
-              ></textarea>
-            </div>
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-custom-primary text-white font-bold py-3 px-8 rounded-full hover:bg-custom-primary-dark transition-colors"
-              >
-                Submit Request
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+     <ContactForm />
     </div>
   );
 };

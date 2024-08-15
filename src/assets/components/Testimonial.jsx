@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-// Import your custom CSS
+
 
 const Testimonials = () => {
   const testimonials = [
@@ -52,7 +52,7 @@ const Testimonials = () => {
           infinite={true}
           autoPlay={true}
           autoPlaySpeed={5000}
-          className="custom-carousel" // Add a custom class
+          className="custom-carousel" 
         >
           {testimonials.map((testimonial, index) => (
             <div key={index} className="p-8 bg-white shadow-lg rounded-lg text-center">
