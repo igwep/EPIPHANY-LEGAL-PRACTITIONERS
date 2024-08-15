@@ -5,7 +5,9 @@ const ContactForm = () => {
   const [state, handleSubmit] = useForm("mwpeqpyj"); // Replace "yourFormspreeID" with your actual Formspree ID
 
   if (state.succeeded) {
-    return <p className="text-center text-green-500">Thanks for reaching out! We'll get back to you soon.</p>;
+    return <p className="mt-96 px-4 mb-20 py-4 text-center text-white font-semibold bg-custom-primary rounded-md shadow-lg max-w-md mx-auto">
+    Thank you for reaching out! We appreciate your message and will get back to you as soon as possible.
+  </p>;
   }
 
   return (
@@ -18,7 +20,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="name"
-              name="name" // Add this name attribute for Formspree
+              name="name" 
               className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-custom-primary"
               placeholder="Your Name"
               required

@@ -5,6 +5,7 @@ import { GlobalContext } from './GlobalProvider';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Navbar = () => {
@@ -12,7 +13,8 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { menuModal, setMenuModal } = useContext(GlobalContext);
   const dropdownRef = useRef(null);
-  const {handleLinkClick} = useContext(GlobalContext);
+  const { handleLinkClick } = useContext(GlobalContext);
+
   const handleMobileModal = () => {
     setMenuModal(!menuModal);
   };
@@ -80,48 +82,54 @@ const Navbar = () => {
         }`}
       >
         {/* Logo */}
-        <img
-          src="/assets/logo/Picture3.png"
-          alt="Logo"
-          className={`h-16  md:h-16 transition-transform duration-300 ${isScrolled ? 'scale-75 flex' : 'scale-100 hidden'}`}
-        />
+        <Link onClick={handleLinkClick} to="/">
+          <img
+            src="/assets/logo/Picture3.png"
+            alt="Logo"
+            className={`h-16  md:h-16 transition-transform duration-300 ${
+              isScrolled ? 'scale-75 flex' : 'scale-100 hidden'
+            }`}
+          />
+        </Link>
 
         {/* Navigation Links */}
         <div className="hidden md:flex gap-4 text-white">
-          <Link onClick={handleLinkClick}  to="/" className="hover:text-gray-300">
+          <Link onClick={handleLinkClick} to="/" className="hover:text-gray-300">
             Home
           </Link>
           <Link onClick={handleLinkClick} to="/about" className="hover:text-gray-300">
             About
           </Link>
           {/* Services Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            
-            ref={dropdownRef}
-          >
-            <Link onClick={handleLinkClick} to="/services" className="hover:text-gray-300 flex items-center gap-1">
+          <div className="relative" onMouseEnter={() => setIsDropdownOpen(true)} ref={dropdownRef}>
+            <Link
+              onClick={handleLinkClick}
+              to="/services"
+              className="hover:text-gray-300 flex items-center gap-1"
+            >
               Services <ExpandMoreIcon />
             </Link>
             {isDropdownOpen && (
-              <div onMouseLeave={() => setIsDropdownOpen(false)} className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg py-2">
+              <div
+                onMouseLeave={() => setIsDropdownOpen(false)}
+                className="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg py-2"
+              >
                 <Link
-                onClick={handleLinkClick}
+                  onClick={handleLinkClick}
                   to="/dispute-resolution"
                   className="block px-4 py-2 hover:bg-gray-200"
                 >
                   Dispute Resolution
                 </Link>
                 <Link
-                onClick={handleLinkClick}
+                  onClick={handleLinkClick}
                   to="/consultation"
                   className="block px-4 py-2 hover:bg-gray-200"
                 >
                   Consultation
                 </Link>
                 <Link
-                onClick={handleLinkClick}
+                  onClick={handleLinkClick}
                   to="/legal-representation"
                   className="block px-4 py-2 hover:bg-gray-200"
                 >
@@ -144,31 +152,59 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      {menuModal && (
-        <div className="md:hidden flex flex-col items-center bg-gray-200 text-black">
-          <Link onClick={handleLinkClick} to="/" className="py-2 hover:underline underline-offset-4 decoration-2">
+      {/* Mobile Slide Menu */}
+      <div
+        className={`fixed inset-y-0 right-0 w-2/3 bg-gray-900 text-white p-6 transform ${
+          menuModal ? 'translate-x-0' : 'translate-x-full'
+        } transition-transform duration-300 ease-in-out md:hidden z-50`}
+      >
+        {/* Close Button */}
+        <div className="flex justify-end">
+          <CloseIcon onClick={handleMobileModal} className="cursor-pointer" />
+        </div>
+        <div className="mt-8 flex flex-col gap-6">
+          <Link
+            onClick={() => {
+              handleMobileModal();
+              handleLinkClick();
+            }}
+            to="/"
+            className="hover:underline"
+          >
             Home
           </Link>
-          <Link onClick={handleLinkClick} to="/about" className="py-2 hover:underline underline-offset-4 decoration-2">
+          <Link
+            onClick={() => {
+              handleMobileModal();
+              handleLinkClick();
+            }}
+            to="/about"
+            className="hover:underline"
+          >
             About
           </Link>
-          {/* Mobile Services Dropdown */}
-          <div className="w-full flex flex-col items-center">
-            <Link onClick={handleLinkClick}
+          <Link
+            onClick={() => {
+              handleMobileModal();
+              handleLinkClick();
+            }}
             to="/services"
-          
-              className="py-2 hover:underline underline-offset-4 decoration-2 flex items-center gap-1 w-full justify-center"
-            >
-              Services 
-            </Link>
-            
-          </div>
-          <Link onClick={handleLinkClick} to="/contact" className="py-2 hover:underline underline-offset-4 decoration-2">
+            className="hover:underline"
+          >
+            Services
+          </Link>
+          <Link
+            onClick={() => {
+              handleMobileModal();
+              handleLinkClick();
+            }}
+            to="/contact"
+            className="hover:underline"
+          >
             Contact
           </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

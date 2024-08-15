@@ -35,7 +35,7 @@ const Consultation = () => {
             </ul>
           </div>
           <div className="md:w-1/2">
-            <img src="../src/assets/images/New Folder/agenda-2080420.jpg" alt="Schedule Consultation" className="rounded-lg shadow-lg" />
+            <img src="/assets/images/New%20Folder/agenda-2080420.jpg" alt="Schedule Consultation" className="rounded-lg shadow-lg" />
           </div>
         </div>
       </section>

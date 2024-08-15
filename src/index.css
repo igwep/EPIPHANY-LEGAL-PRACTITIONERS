@@ -6,3 +6,6 @@
 .custom-carousel .react-multiple-carousel__arrow {
   z-index: 1; /* Lower z-index to ensure it stays below the navbar */
 }
+.position{
+  background-position: 20% 45%;
+}

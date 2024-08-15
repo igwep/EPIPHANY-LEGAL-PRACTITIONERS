@@ -5,8 +5,8 @@ const DisputeResolution = () => {
   return (
     <div className="bg-gray-100 md:mt-40 mt-80">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('')" }}>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+      <section className="relative bg-cover bg-center md:position md:h-[70vh] h-[50vh]" style={{ backgroundImage: "url('/assets/images/New%20Folder/dispute.jpg')" }}>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Dispute Resolution</h1>
           <p className="mt-4 text-lg md:text-xl">Effective Strategies for Resolving Conflicts</p>
