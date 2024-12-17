@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 left-0 z-50 transition-colors font-Gup duration-300 ${
+      className={`fixed w-full top-0 left-0 z-50 transition-colors duration-300 ${
         isScrolled ? 'bg-gray-900' : 'bg-gray-900'
       }`}
     >
@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="flex flex-col md:flex-row items-center">
           <img src="/assets/logo/Picture2.png" alt="Logo" className="h-16 md:h-20" />
           <div className="flex flex-col justify-center mt-2 md:mt-0 md:ml-4 text-center md:text-left">
-            <p className="text-xl md:text-3xl font-extrabold uppercase text-custom-primary">Epiphany Legal Practitioners</p>
+            <p className="text-xl md:text-3xl font-extrabold uppercase text-custom-primary  font-Gup">Epiphany Legal Practitioners</p>
             <hr className="border-custom-primary border-t-2 mt-1 hidden md:block" />
           </div>
         </div>

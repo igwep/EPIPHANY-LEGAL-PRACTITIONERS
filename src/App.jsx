@@ -18,7 +18,7 @@ const App = () => {
     <GlobalProvider>
       <Router>
       <Navbar />
-      <div className="">
+      <div className="font-sans">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
